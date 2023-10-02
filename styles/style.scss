@@ -13,7 +13,7 @@ header {
   img {
     position: relative;
     margin-left: 35px;
-    width: 150px;
+    width: 135px;
   }
   p {
     margin-left: 5px;
@@ -21,7 +21,15 @@ header {
     font-size: 2em;
     font-family: Mahaputra;
     span {
-      font-size: 1.5em;
+      font-size: 1.25em;
     }
+  }
+}
+main {
+  display: flex;
+  justify-content: center;
+  h1 {
+    display: inline-flex;
+    font-size: 10vw;
   }
 }
