@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400&display=swap');
+
+/* reset css */
+* {
+  all: unset;
+}
+
+/*basic tag configuration*/
+
+html {
+  /*
+  - set standard font size for rem scaling
+  - set default font
+  > (https://developer.mozilla.org/en-US/docs/Web/CSS/font-size#rems)
+  */
+  height: 100%;
+  font-size: 16px;
+}
+body {
+  display: block;
+  height: 100%;
+  background: whitesmoke;
+  color: white;
+  font-family: 'Lexend', sans-serif;
+}
+head {
+  display: none;
+}
+style {
+  display: none;
+}
+a:link,
+a:hover,
+a:focus,
+a:visited {
+  color: #004CFF;
+}
+a:hover { 
+  color: #00c; 
+}

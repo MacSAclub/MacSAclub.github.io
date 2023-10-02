@@ -1,0 +1,27 @@
+@font-face {
+  font-family: Mahaputra;
+  src: url(../fonts/Mahaputra.ttf);
+}
+
+header {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  background-color: #c21807;
+  color: #F4C430;
+  height: 175px;
+  img {
+    position: relative;
+    margin-left: 35px;
+    width: 150px;
+  }
+  p {
+    margin-left: 5px;
+    display: block;
+    font-size: 2em;
+    font-family: Mahaputra;
+    span {
+      font-size: 1.5em;
+    }
+  }
+}
