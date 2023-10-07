@@ -18,7 +18,7 @@ html {
 body {
   display: block;
   height: 100%;
-  background: whitesmoke;
+  background: linear-gradient(180deg, #c21807 20%, #f4c430 100%);
   color: black;
   font-family: "Lexend", sans-serif;
 }
