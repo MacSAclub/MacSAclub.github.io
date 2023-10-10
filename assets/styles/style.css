@@ -33,6 +33,7 @@ main {
 }
 main #slogan {
   display: flex;
+  overflow: hidden;
   justify-content: center;
   align-items: center;
   width: 100%;

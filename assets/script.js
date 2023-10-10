@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
   const slogan_elem = document.getElementById("slogan")
 
   setInterval(async () => {
+    let second_iteration = false;
     const new_elem = document.createElement("p");
     const elem_style = new_elem.style;
     new_elem.innerText = welcome_languages[getRandomInt(0, welcome_languages.length - 1)];
@@ -23,10 +24,15 @@ document.addEventListener("DOMContentLoaded", async (event) => {
     elem_style.top = `${getRandomInt(5, 95)}%`;
     elem_style.transform = "translate(-50%, -50%);"
     elem_style.animation = "fadeIn 3s forwards";
+    new_elem.addEventListener("animationend", function() {
+      if (second_iteration == true) {
+        new_elem.remove()
+      }
+      else {
+        elem_style.animation = "fadeOut 3s forwards";
+        second_iteration = true
+      }
+    }, false);
     slogan_elem.appendChild(new_elem);
-    await timeout(3000);
-    elem_style.animation = "fadeOut 3s forwards";
-    await timeout(5000);
-    new_elem.remove()
   }, 100)
 });
