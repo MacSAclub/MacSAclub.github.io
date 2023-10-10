@@ -14,20 +14,19 @@ function timeout(ms) {
 document.addEventListener("DOMContentLoaded", async (event) => {
   const slogan_elem = document.getElementById("slogan")
 
-  while(true) {
+  setInterval(async () => {
     const new_elem = document.createElement("p");
     const elem_style = new_elem.style;
     new_elem.innerText = welcome_languages[getRandomInt(0, welcome_languages.length - 1)];
     elem_style.position = "absolute";
-    elem_style.left = `${getRandomInt(5, 90)}%`;
-    elem_style.top = `${getRandomInt(5, 90)}%`;
-    elem_style.animation = "fadeIn 5s";
+    elem_style.left = `${getRandomInt(5, 95)}%`;
+    elem_style.top = `${getRandomInt(5, 95)}%`;
+    elem_style.transform = "translate(-50%, -50%);"
+    elem_style.animation = "fadeIn 3s forwards";
     slogan_elem.appendChild(new_elem);
-    await timeout(50)
-    setTimeout(async () => {
-      elem_style.animation = "fadeOut 3s";
-      await timeout(5000)
-      new_elem.remove()
-    }, 5000)
-  }
+    await timeout(3000);
+    elem_style.animation = "fadeOut 3s forwards";
+    await timeout(5000);
+    new_elem.remove()
+  }, 100)
 });
